@@ -1,0 +1,44 @@
+class Book {
+
+  String title;
+  String author;
+  
+  double _price;
+
+  Book(this.title, this.author, this._price);
+
+  double get price => _price;
+
+  void applyDiscount(double percentage) {
+    if (percentage > 0 && percentage <= 100) {
+      _price -= _price * (percentage / 100);
+      print("Applied a $percentage% discount to '$title'.");
+    } else {
+      print("Invalid discount percentage.");
+    }
+  }
+
+  void displayInfo() {
+    print("Book: '$title' by $author | Price: \$${_price.toStringAsFixed(2)}");
+  }
+}
+
+void main() {
+  Book book1 = Book("Si Unggoy at si Maxine", "NTC", 15.99);
+  Book book2 = Book("2026", "Peejay Real", 12.50);
+
+  List<Book> library = [book1, book2];
+
+  print("--- Initial Library Inventory ---");
+  for (var book in library) {
+    book.displayInfo();
+  }
+
+  print("\n--- Testing Behaviors & Encapsulation ---");
+  book1.applyDiscount(10);
+  
+  print("\n--- Updated Library Inventory ---");
+  for (var book in library) {
+    book.displayInfo();
+  }
+}
