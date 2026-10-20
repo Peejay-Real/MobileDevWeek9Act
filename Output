@@ -1,0 +1,10 @@
+--- Initial Library Inventory ---
+Book: 'Si Unggoy at si Maxine' by NTC | Price: $15.99
+Book: '2026' by Peejay Real | Price: $12.50
+
+--- Testing Behaviors & Encapsulation ---
+Applied a 10% discount to 'Si Unggoy at si Maxine'.
+
+--- Updated Library Inventory ---
+Book: 'Si Unggoy at si Maxine' by NTC | Price: $14.39
+Book: '2026' by Peejay Real | Price: $12.50
